@@ -5,7 +5,7 @@ a.nav-link {
 .video-background {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 51vh;
   overflow: hidden;
 }
 
@@ -14,16 +14,19 @@ a.nav-link {
   top: 50%;
   left: 50%;
   width: 100vw;
-  height: 56.25vw; /* Ratio 16:9 */
+  height: 56.25vw;
+  /* Ratio 16:9 */
   min-height: 100vh;
-  min-width: 177.77vh; /* Ratio 16:9 */
+  min-width: 177.77vh;
+  /* Ratio 16:9 */
   transform: translate(-50%, -50%);
-  pointer-events: none; /* Empêche l'interaction avec la vidéo */
+  pointer-events: none;
+  /* Empêche l'interaction avec la vidéo */
 }
 
 .video-foreground {
   position: absolute;
-  top: 30%;
+  top: 27%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -56,7 +59,9 @@ a.nav-link {
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.btn-shop, a.seated-event-link, .btn-more {
+.btn-shop,
+a.seated-event-link,
+.btn-more {
   background: transparent;
   border: 2px solid #141b21;
   font-weight: bold;
@@ -90,19 +95,26 @@ span.material-icons {
 }
 
 section#music {
-  background-color: #a78c6e;
+  background-color: #5aa49e;
 }
 
-section#tourdates, section#footer {
+section#tourdates,
+section#footer {
   background-color: #46bcd8;
 }
 
-section#contact, section#video, .sidebar {
+section#contact,
+section#video,
+.sidebar {
   background-color: #ecc91d;
 }
 
-#music h2, #tourdates h2, #contact h2, #video h2 {
-  font-family: "Anton", serif;
+#music h2,
+#tourdates h2,
+#contact h2,
+#video h2 {
+  font-family: "Montserrat", serif;
+  font-weight: bold;
   color: #141b21;
   margin: 0;
   padding-top: 40px;
@@ -120,7 +132,7 @@ a.btn-social {
   border-radius: 60px;
 }
 
-iframe.video{
+iframe.video {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
@@ -134,7 +146,8 @@ iframe.video{
   width: 250px;
   height: 100vh;
   padding: 20px;
-  transition: left 0.3s ease-in-out; /* Animation du slide-in */
+  transition: left 0.3s ease-in-out;
+  /* Animation du slide-in */
 }
 
 /* Quand la sidebar est ouverte */
