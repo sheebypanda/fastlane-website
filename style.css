@@ -5,7 +5,7 @@ a.nav-link {
 .video-background {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@ a.nav-link {
 
 .video-foreground {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -49,7 +49,6 @@ a.nav-link {
   background: transparent;
   border: 2px solid white;
   font-weight: bold;
-  padding: 10px 20px;
   font-size: 1.2rem;
   font-family: "Montserrat", serif;
   color: white;
@@ -57,14 +56,14 @@ a.nav-link {
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.btn-shop, a.seated-event-link {
+.btn-shop, a.seated-event-link, .btn-more {
   background: transparent;
-  border: 2px solid black;
+  border: 2px solid #141b21;
   font-weight: bold;
   padding: 10px 20px;
   font-size: 1.2rem;
   font-family: "Montserrat", serif;
-  color: black;
+  color: #141b21;
   border-radius: 0px;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -83,7 +82,7 @@ a.seated-event-link:hover {
 
 .btn-watch:hover {
   background-color: white;
-  color: black
+  color: #141b21
 }
 
 span.material-icons {
@@ -94,30 +93,20 @@ section#music {
   background-color: #a78c6e;
 }
 
-section#tourdates {
+section#tourdates, section#footer {
   background-color: #46bcd8;
 }
 
-section#contact {
+section#contact, section#video, .sidebar {
   background-color: #ecc91d;
 }
 
-#music h2, #tourdates h2 {
+#music h2, #tourdates h2, #contact h2, #video h2 {
   font-family: "Anton", serif;
-  color: black;
+  color: #141b21;
   margin: 0;
-  padding: 50px 0;
-}
-
-/* #tourdates {
-  color: black;
-} */
-
-#contact h2 {
-  font-family: "Anton", serif;
-  color: black;
-  margin: 0;
-  padding: 30px 0;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 #contact h3 {
@@ -125,5 +114,75 @@ section#contact {
   font-weight: 100;
   font-family: "Montserrat", serif;
   letter-spacing: 0.4em;
-  margin-bottom: 30px;
+}
+
+a.btn-social {
+  border-radius: 60px;
+}
+
+iframe.video{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Sidebar cachée (hors écran) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  transition: left 0.3s ease-in-out; /* Animation du slide-in */
+}
+
+/* Quand la sidebar est ouverte */
+.sidebar.active {
+  left: 0;
+  z-index: 1001;
+}
+
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Bouton de fermeture */
+.btn-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Style des liens */
+.sidebar .nav-link {
+  color: #141b21;
+}
+
+.sidebar .nav-link:hover {
+  color: #46bcd8;
+}
+
+/* Ajoute un effet "flouté" à l'arrière-plan quand le menu est ouvert */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* Quand le menu est ouvert, l'overlay s'affiche */
+.overlay.active {
+  display: block;
 }
