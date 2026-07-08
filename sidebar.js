@@ -22,4 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
   menuToggle.addEventListener("click", openMenu);
   closeMenu.addEventListener("click", closeSidebar);
   overlay.addEventListener("click", closeSidebar);
+
+  // Ferme la sidebar quand on clique sur un lien du menu
+  sidebar.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", closeSidebar);
+  });
 });
