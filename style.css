@@ -262,7 +262,7 @@ body {
   border: 2px solid #141b21;
   font-weight: bold;
   padding: 10px 20px;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
   font-size: 1.1rem;
   font-family: "Montserrat", serif;
   color: #141b21;
@@ -276,6 +276,24 @@ body {
   background-color: #141b21;
   color: #46bcd8;
   border-color: #141b21;
+}
+
+.contact-docs .btn-doc {
+  background: transparent;
+  border: 2px solid #141b21;
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 0 5px 40px;
+  font-size: 1rem;
+  font-family: "Montserrat", serif;
+  color: #141b21;
+  border-radius: 0px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contact-docs .btn-doc:hover {
+  background-color: #141b21;
+  color: #46bcd8;
 }
 
 .spotify-embed {
