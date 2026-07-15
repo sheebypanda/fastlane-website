@@ -77,6 +77,32 @@ a.seated-event-link,
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+.btn-shop-primary {
+  font-size: 1.4rem;
+  padding: 14px 28px;
+}
+
+.btn-shop-secondary {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-width: 2px;
+}
+
+.shop-note {
+  color: #141b21;
+  font-weight: bold;
+  max-width: 420px;
+  margin-bottom: 20px;
+}
+
+.shop-alt-label {
+  color: #141b21;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
 a.seated-event-link:hover {
   background: transparent;
   border: 2px solid white;
