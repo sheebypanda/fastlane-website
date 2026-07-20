@@ -103,6 +103,13 @@ a.seated-event-link,
   margin-bottom: 8px;
 }
 
+.shop-divider {
+  max-width: 420px;
+  margin: 20px 0;
+  border: none;
+  border-top: 2px solid rgba(20, 27, 33, 0.2);
+}
+
 a.seated-event-link:hover {
   background: transparent;
   border: 2px solid white;
@@ -144,7 +151,8 @@ section#footer,
 #tourdates h2,
 #contact h2,
 #about h2,
-#video h2 {
+#video h2,
+#footer h2 {
   font-family: "Montserrat", serif;
   font-weight: bold;
   color: #141b21;
@@ -162,7 +170,22 @@ section#footer,
 
 a.btn-social {
   border-radius: 60px;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 }
+
+a.btn-social:hover {
+  transform: scale(1.15);
+}
+
+.btn-social-facebook { color: #1877f2; }
+.btn-social-instagram { color: #e1306c; }
+.btn-social-tiktok { color: #000000; }
+.btn-social-youtube { color: #ff0000; }
+.btn-social-spotify { color: #1db954; }
+.btn-social-deezer { color: #a238ff; }
+.btn-social-bandcamp { color: #1da0c3; }
+.btn-social-store { color: #141b21; }
+.btn-social-merch { color: #141b21; }
 
 iframe.video {
   width: 100%;
@@ -260,6 +283,13 @@ body {
 
 .vinyl-img {
   filter: drop-shadow(10px 10px 12px rgba(20, 27, 33, 0.6));
+}
+
+@media (min-width: 992px) {
+  .vinyl-img {
+    position: sticky;
+    top: 40px;
+  }
 }
 
 .about-photo {
