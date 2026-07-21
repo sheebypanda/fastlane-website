@@ -161,6 +161,26 @@ section#footer,
   padding-bottom: 30px;
 }
 
+.title-highlight {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4em;
+}
+
+.title-highlight::after {
+  content: "";
+  position: absolute;
+  left: -12%;
+  right: -13%;
+  bottom: -0.25em;
+  height: 0.5em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 24' preserveAspectRatio='none'%3E%3Cpath d='M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10' fill='none' stroke='%23141b21' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(-1deg);
+  pointer-events: none;
+}
+
 #contact h3 {
   font-size: 1rem;
   font-weight: 100;
@@ -175,6 +195,14 @@ a.btn-social {
 
 a.btn-social:hover {
   transform: scale(1.15);
+}
+
+/* Animated on the icon itself (not the anchor), which already carries a
+   permanent "animate__animated animate__fadeInUp" class from its entrance
+   reveal — animating that same element's "animation" property on hover
+   would replay the entrance animation on hover-out. */
+a.btn-social:hover i {
+  animation: bounce 0.8s;
 }
 
 .btn-social-facebook { color: #1877f2; }
@@ -357,4 +385,67 @@ body {
   border-radius: 12px;
   max-width: 500px;
   display: block;
+}
+
+/* Scroll-reveal animations (animate.css triggered via animations.js) */
+:root {
+  --animate-duration: 0.8s;
+}
+
+[data-animate]:not(.animate__animated) {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    opacity: 1;
+  }
+}
+
+/* Hover micro-interactions. These use transform transitions rather than
+   animate.css keyframes so hovering never restarts the entrance animation
+   (buttons/socials keep an "animate__animated" class permanently once
+   revealed, and re-applying an "animation" on hover-out would replay it). */
+.btn-shop,
+.btn-more,
+.btn-contact,
+.contact-docs .btn-doc,
+a.seated-event-link,
+.btn-watch {
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-shop:hover,
+.btn-more:hover,
+.btn-contact:hover,
+.contact-docs .btn-doc:hover,
+a.seated-event-link:hover,
+.btn-watch:hover {
+  transform: scale(1.05);
+}
+
+.video-thumbnail {
+  transition: transform 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 24px rgba(20, 27, 33, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shop:hover,
+  .btn-more:hover,
+  .btn-contact:hover,
+  .contact-docs .btn-doc:hover,
+  a.seated-event-link:hover,
+  .btn-watch:hover,
+  a.btn-social:hover,
+  .video-thumbnail:hover {
+    transform: none;
+  }
+
+  a.btn-social:hover i {
+    animation: none;
+  }
 }
