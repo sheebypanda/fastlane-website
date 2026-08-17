@@ -63,11 +63,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Montserrat:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <noscript><style>[data-animate]{opacity:1 !important;}</style></noscript>
   </head>
 
   <body>
+
+    <!-- Roughen filter for hand-drawn look on title icons (.title-icon). Remove this <svg> + the .title-icon filter/transform rules in style.css to revert. -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <filter id="roughen-icon">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
 
     <nav class="sidebar">
       <div class="sidebar-content">
@@ -110,7 +118,7 @@
             <img src="img/vinyl.gif" alt="Vinyl" class="img-fluid vinyl-img" loading="lazy">
           </div>
           <div class="col-lg-7 col-md-12" data-animate="fadeInRight">
-            <h2><i class="fa-solid fa-record-vinyl me-2"></i><span class="title-highlight">SHOP VINYL & MERCH</span></h2>
+            <h2 data-animate="handwrite"><span class="title-highlight"><span class="title-text"><i class="fa-solid fa-record-vinyl title-icon" style="--icon-tilt:-4deg"></i>SHOP VINYL & MERCH</span><svg class="title-underline" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10"/></svg></span></h2>
             <a href="https://fast-lane.sumupstore.com" class="btn btn-shop btn-shop-primary btn-info mb-2">
               <i class="fa-solid fa-bag-shopping me-2"></i>OFFICIAL STORE
             </a>
@@ -133,7 +141,7 @@
             <a href="https://punkrockradar.limitedrun.com/products/766768-fast-lane-incomplete-all-fine-yellow-100-blue-100-vinyl" class="btn btn-shop btn-shop-secondary btn-info mb-3" target="_blank">
               <i class="fa-solid fa-bag-shopping me-2"></i>PUNK ROCK RADAR (🇺🇸 US)
             </a>
-            <h2><i class="fa-brands fa-spotify me-2"></i><span class="title-highlight">STREAM</span></h2>
+            <h2 data-animate="handwrite"><span class="title-highlight"><span class="title-text"><i class="fa-brands fa-spotify title-icon" style="--icon-tilt:3deg"></i>STREAM</span><svg class="title-underline" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10"/></svg></span></h2>
             <iframe class="spotify-embed mb-3"
               src="https://open.spotify.com/embed/album/4NYkmYv9AYNGSMGjs5WeTC?utm_source=generator"
               title="Fastlane - Incomplete & All Fine (Spotify player)"
@@ -153,7 +161,7 @@
       <div class="container-fluid">
           <div class="row">
               <div class="col-12 col">
-                  <h2 class="text-center" data-animate="fadeInDown"><i class="fa-solid fa-video me-2"></i><span class="title-highlight">VIDEOS</span></h2>
+                  <h2 class="text-center" data-animate="handwrite"><span class="title-highlight"><span class="title-text"><i class="fa-solid fa-video title-icon" style="--icon-tilt:-3deg"></i>VIDEOS</span><svg class="title-underline" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10"/></svg></span></h2>
               </div>
           </div>
           <div class="row">
@@ -210,7 +218,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-center m-3" data-animate="fadeInDown"><i class="fa-solid fa-ticket me-2"></i><span class="title-highlight">TOUR DATES</span></h2>
+            <h2 class="text-center m-3" data-animate="handwrite"><span class="title-highlight"><span class="title-text"><i class="fa-solid fa-ticket title-icon" style="--icon-tilt:5deg"></i>TOUR DATES</span><svg class="title-underline" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10"/></svg></span></h2>
             
             
             <a class="bit-widget-initializer"
@@ -320,7 +328,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-center" data-animate="fadeInDown"><i class="fa-solid fa-users me-2"></i><span class="title-highlight">ABOUT</span></h2>
+            <h2 class="text-center" data-animate="handwrite"><span class="title-highlight"><span class="title-text"><i class="fa-solid fa-users title-icon" style="--icon-tilt:-5deg"></i>ABOUT</span><svg class="title-underline" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10"/></svg></span></h2>
           </div>
         </div>
         <div class="row align-items-center">
@@ -342,7 +350,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <h2 data-animate="fadeInDown"><i class="fa-solid fa-envelope me-2"></i><span class="title-highlight">CONTACT</span></h2>
+            <h2 data-animate="handwrite"><span class="title-highlight"><span class="title-text"><i class="fa-solid fa-envelope title-icon" style="--icon-tilt:2deg"></i>CONTACT</span><svg class="title-underline" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10"/></svg></span></h2>
             <p class="contact-tagline">BOOKING &amp; INQUIRIES</p>
             <a href="mailto:fastlaneskatepunk@gmail.com" class="btn btn-contact" data-animate="zoomIn">
               <i class="fa-solid fa-envelope me-2"></i>fastlaneskatepunk@gmail.com
@@ -361,7 +369,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center p-3">
-            <h2 data-animate="fadeInDown"><i class="fa-solid fa-share-nodes me-2"></i><span class="title-highlight">FOLLOW US</span></h2>
+            <h2 data-animate="handwrite"><span class="title-highlight"><span class="title-text"><i class="fa-solid fa-share-nodes title-icon" style="--icon-tilt:-2deg"></i>FOLLOW US</span><svg class="title-underline" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10"/></svg></span></h2>
             <a href="https://www.facebook.com/FastLaneBdx" target="_blank" class="btn btn-social btn-social-facebook m-1" aria-label="Fastlane on Facebook" data-animate="fadeInUp"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
             <a href="https://www.instagram.com/fastlane_skatepunk/" target="_blank" class="btn btn-social btn-social-instagram m-1" aria-label="Fastlane on Instagram" data-animate="fadeInUp" data-animate-delay="0.05s"><i class="fa-brands fa-instagram fa-2x"></i></a>
             <a href="https://www.tiktok.com/@fastlane_skatepunk_band" target="_blank" class="btn btn-social btn-social-tiktok p-2 m-1" aria-label="Fastlane on TikTok" data-animate="fadeInUp" data-animate-delay="0.1s"><i class="fa-brands fa-tiktok fa-2x"></i></a>

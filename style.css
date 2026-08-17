@@ -153,8 +153,8 @@ section#footer,
 #about h2,
 #video h2,
 #footer h2 {
-  font-family: "Anton", serif;
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-family: "Permanent Marker", "Anton", serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
   color: #141b21;
   margin: 0;
   padding-top: 40px;
@@ -167,18 +167,54 @@ section#footer,
   padding-bottom: 0.4em;
 }
 
-.title-highlight::after {
-  content: "";
+.title-icon {
+  margin-right: 0.35em;
+  display: inline-block;
+  transform: rotate(var(--icon-tilt, -3deg));
+  filter: url(#roughen-icon);
+}
+
+.title-underline {
   position: absolute;
-  left: -12%;
-  right: -13%;
+  left: -0.35em;
   bottom: -0.25em;
+  width: calc(100% + 0.7em);
   height: 0.5em;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 24' preserveAspectRatio='none'%3E%3Cpath d='M3,14 C60,6 110,20 150,12 C190,5 240,19 297,10' fill='none' stroke='%23141b21' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  overflow: visible;
   transform: rotate(-1deg);
   pointer-events: none;
+}
+
+.title-underline path {
+  fill: none;
+  stroke: #141b21;
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+@keyframes handwrite-text {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes handwrite-draw {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+.title-text {
+  display: inline-block;
+}
+
+.animate__handwrite .title-text {
+  animation: handwrite-text 1s ease forwards;
+}
+
+.animate__handwrite .title-underline path {
+  stroke-dasharray: 1000;
+  animation: handwrite-draw 0.7s ease-out forwards;
+  animation-delay: 0.9s;
+  animation-fill-mode: both;
 }
 
 #contact h3 {
